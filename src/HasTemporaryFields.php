@@ -11,6 +11,6 @@ trait HasTemporaryFields
     {
         return parent::fillFields($request, $model, $fields->reject(function ($field) {
             return $field->meta['_temp'] ?? false;
-        }))->all();
+        }));
     }
 }
